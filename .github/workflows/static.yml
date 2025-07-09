@@ -32,11 +32,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@v4
       - name: Update npm
-        run: npm install npm@latest
+        run: npm install -g npm@latest
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: Build App
         run: npm run build
       - name: Setup Pages
